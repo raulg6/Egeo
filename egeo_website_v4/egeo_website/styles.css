@@ -1,0 +1,380 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(font/coolvetica_rg_it.otf);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFirstFont;
+}
+body{
+    background-color: #FFF4B8;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    padding: 0 9%;
+}
+ 
+.navbar_list {
+    display: flex;
+    justify-content: center;
+    font-size: 165%;
+    list-style-type: none;
+    padding: 0 2%;
+}
+ 
+.navbar_list li a:hover {
+    color:  #4EABCC;
+    font-size: 118%;
+    transition: color 0.2s, font-size 0.2s;
+}
+ 
+.navbar_list li a:not(:hover) {
+    transition: color 0.2s, font-size 0.2s;
+}
+ 
+@media screen and (max-width: 525px) {
+    .navbar_list li {
+        padding: 0 5px;
+    font-size: 80%;
+ 
+    }
+}
+ 
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 100;
+    padding: 2%;
+    box-sizing: border-box;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+}
+
+.landing_page_img {
+    width: 100%;
+    height: auto;
+}
+
+.blur-out {
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+h1{
+    text-align: center;
+    font-size: 400%;
+    padding: 4%;
+    color: #4EABCC;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "text1 pic1"
+        "pic2 text2";
+}
+.text1{
+    grid-area: text1;
+    font-size: 200%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30%;
+}
+.text2{
+    grid-area: text2;
+    font-size: 200%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+@media screen and (max-width: 768px) {
+    .text1,
+    .text2 {
+        font-size: 100%;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+}
+.special_words{
+    color: #4EABCC;
+}
+.fruits {
+    grid-area: pic1;
+    padding-bottom: 5%;
+    padding-left: 30%;
+    padding-right: 30%;
+    width: 95%;
+}
+
+.egeo_dose {
+    grid-area: pic2;
+    width: 65%;
+    padding-bottom: 5%;
+    padding-left: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    .fruits {
+        width: 110%;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .egeo_dose {
+        width: 100%;
+        margin: auto;
+        padding-top: 10px;
+    }
+}
+
+.form_container {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FAC673;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mail_submit {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #FAC673;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.submit_button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4EABCC;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit_button:hover {
+    background-color: #357d96;
+}
+
+@media screen and (max-width: 768px) {
+    .form_container {
+        max-width: 300px;
+        padding: 15px;
+    }
+ 
+    .submit_button {
+        padding: 8px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+}
+
+.about_us_titel {
+    text-align: center;
+    font-size: 400%;
+    padding: 4%;
+    padding-top: 10%;
+    color: #4EABCC;
+}
+
+.about_us_uebertitel {
+    text-align: center;
+    font-size: 275%;
+    padding: 3%;
+    padding-top: 6.5%;
+    padding-bottom: 0.5%;
+    color: #4EABCC;
+}
+
+.about_us_uebertitel2 {
+    text-align: center;
+    font-size: 275%;
+    padding: 3%;
+    padding-bottom: 0.5%;
+    color: #4EABCC;
+}
+
+
+.about_us_text1{
+    font-size: 175%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 768px) {
+    .about_us_text1{
+        font-size: 100%;
+    }
+
+    .about_us_titel {
+        font-size: 200%;
+    }
+
+    .about_us_uebertitel,
+    .about_us_uebertitel2{
+        font-size: 150%;
+    }
+}
+
+.partner_titel {
+    text-align: center;
+    font-size: 400%;
+    padding-top: 10%;
+    color: #4EABCC;
+}
+ 
+.partner_text{
+    display: flex;
+    align-items: center;
+    font-size: 175%;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 768px) {
+    .partner_text{
+        font-size: 100%;
+    }
+
+    .partner_titel  {
+        font-size: 200%;
+    }
+}
+
+.grid_contact {
+    display: grid;
+    grid-template-columns: auto auto; 
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "pic1 form1";
+}
+
+.pic1 {
+    grid-area: pic1;
+    width: 40%;
+    margin-left: 40%;
+    margin-top: 25%;
+    height: auto;
+}
+
+.form_contact {
+    grid-area: form1;
+    padding-bottom: 70%;
+    
+}
+
+.titel_contact {
+    text-align: center;
+    font-size: 275%;
+    margin-right: 30%;
+    margin-bottom: 2%;
+    margin-top: 25%;
+    color: #4EABCC;
+}
+
+.input_name,
+.input_mail,
+.input_titel {
+    width: 50%;
+    height: 10%;
+    padding: 1%;
+    font-size: 130%;
+    margin-left: 11%;
+    margin-top: 1.5%;
+    background-color: #f2f6f8;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+}
+
+.input_message {
+    height: 60%;
+    width: 50%;
+    font-size: 130%;
+    padding: 1%;
+    margin-top: 1.5%;
+    margin-left: 11%;
+    background-color: #f2f6f8;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+
+}
+
+.btn_contact {
+color: white;
+font-size: 140%;
+height: 4%;
+margin-left: 11.5%;
+margin-top: 2%;
+line-height: 2.5rem;
+padding: 0% 5% 0.5%;
+border: 0;
+border-radius: 3rem;
+background-color: #FAC673;
+background-size: 300% 100%;
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+}
+
+.btn_contact:hover:enabled {
+box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+background-size: 100% 100%;
+transform: translateY(-0.15em);
+}
+
+@media screen and (max-width: 768px) {
+    .pic1 {
+        display: none;
+    }
+
+    .titel_contact{
+        font-size: 200%;
+    }
+    .input_name,
+    .input_mail,
+    .input_titel {
+        width: 75%;
+        height: 10%;
+        font-size: 110%;
+        border-radius: 1rem;
+    }
+
+    .input_message {
+        width: 75%;
+        height: 30%;
+        font-size: 110%;
+        border-radius: 1rem;
+
+    }
+
+    .btn_contact {
+        margin-left: 21%;
+        width: 55%;
+        border-radius: 2rem;
+        font-size: 100%;
+        align-items: center;
+
+    }
+}
